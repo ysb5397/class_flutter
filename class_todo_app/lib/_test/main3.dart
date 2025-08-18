@@ -1,3 +1,4 @@
+import 'package:class_todo_app/_test/discord_helper.dart';
 import 'package:class_todo_app/_test/number_view_model.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   final NumberViewModel _numberViewModel = NumberViewModel();
+  final DiscordHelper _discordHelper = DiscordHelper();
 
   @override
   Widget build(BuildContext context) {
@@ -60,6 +62,22 @@ class _MyAppState extends State<MyApp> {
                           },
                           child: Text(
                             "숫자 감소",
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          )),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.red),
+                          onPressed: () async {
+                            await _discordHelper.getWebhookToken();
+                            await _discordHelper.sendWebhook(
+                                _numberViewModel.number.numberCount);
+                            setState(() {});
+                          },
+                          child: Text(
+                            "디스코드로 숫자 전송",
                             style: TextStyle(fontSize: 20, color: Colors.white),
                           )),
                     ]),
