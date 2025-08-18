@@ -1,4 +1,5 @@
 import 'package:class_google_map_v1/models/saved_marker.dart';
+import 'package:class_google_map_v1/screens/marker_list_screen.dart';
 import 'package:class_google_map_v1/services/storage_service.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -34,6 +35,7 @@ class _MapScreenState extends State<MapScreen> {
 
       setState(() {
         _savedMarkers = loadedMarkers;
+        print(_savedMarkers);
         _markerSet.clear();
         loadedMarkers.map((marker) => {
               _markerSet.add(Marker(
@@ -101,9 +103,38 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   // 마커 목록 화면 표시 메서드
-  void _showMarkerList() {
-    ScaffoldMessenger.of(context)
-        .showSnackBar(const SnackBar(content: Text("목록 화면은 다음 단계에서 구현할 예정")));
+  void _showMarkerList() async {
+    if (_savedMarkers.isEmpty) {
+      _showMessage("저장된 장소가 없습니다.");
+    }
+
+    // 저장된 마커들이 있으면 stack 구조로 올릴 예정
+    final result =
+        await Navigator.of(context).push<SavedMarker>(MaterialPageRoute(
+      builder: (context) {
+        return MarkerListScreen();
+      },
+    ));
+    print(result);
+
+    if (result != null) {
+      // 리스트 화면에서 선택된 마커로 포커스를 이동하는 기능
+      await _moveToMarker(result);
+    }
+
+    // 목록에서 돌아온 후 마커를 다시 로드(새로고침)
+    await _loadMarkers();
+  }
+
+  // 특정 마커 위치로 이동하는 기능
+  Future<void> _moveToMarker(SavedMarker marker) async {
+    // 구글맵에서 특정 포지션으로 이동시키는 기능은 _controller가 담당
+    if (_controller != null) {
+      _controller!.animateCamera(
+          CameraUpdate.newLatLngZoom(
+              LatLng(marker.latitude, marker.longitude), 16.0),
+          duration: Duration(seconds: 2));
+    }
   }
 
   void _addMaker(LatLng positon, String name) {
@@ -184,7 +215,7 @@ class _MapScreenState extends State<MapScreen> {
                   child: Text("취소")),
               TextButton(
                   onPressed: () {
-                    _addMaker(position, "새 위치");
+                    _addMaker(position, nameController.text);
                     Navigator.pop(context);
                   },
                   child: Text("저장")),

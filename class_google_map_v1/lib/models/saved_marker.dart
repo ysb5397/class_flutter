@@ -19,8 +19,6 @@ class SavedMarker {
     String id = map["id"] as String;
 
     if (_cache.containsKey(id)) {
-      print("이미 있는 값입니다.");
-
       return _cache[id]!;
     }
 
@@ -31,6 +29,7 @@ class SavedMarker {
       longitude: map["longitude"],
     );
 
+    print("캐시 저장");
     _cache[id] = newMarker;
     return newMarker;
   }

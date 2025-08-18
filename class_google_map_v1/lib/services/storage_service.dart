@@ -42,15 +42,13 @@ class StorageService {
   Future<List<SavedMarker>> findMarkers() async {
     try {
       final prefers = await SharedPreferences.getInstance();
-
       final jsonData = prefers.getString(_markerKey);
 
       if (jsonData != null) {
-        final markerList = json.decode(jsonData);
+        final List<dynamic> markerList = json.decode(jsonData);
         print(markerList);
         final markerMap =
             markerList.map((e) => SavedMarker.fromMap(e)).toList();
-        print(markerMap);
         return markerMap;
       }
       return [];
@@ -70,18 +68,15 @@ class StorageService {
   }
 
   // 특정 ID 값으로 마커 객체 하나를 삭제?
-  Future<bool> deleteOneMarker() async {
+  Future<bool> deleteOneMarker(String markerId) async {
     try {
-      final prefers = await SharedPreferences.getInstance();
-      final markerList = prefers.getStringList(_markerKey);
+      final markers = await findMarkers();
+      final updateMarkers =
+          markers.where((marker) => marker.id != markerId).toList();
 
-      if (markerList != null) {
-        markerList.where((e) => markerList.remove(e));
-        return await prefers.setString(_markerKey, json.encode(markerList));
-      } else {
-        return false;
-      }
+      return await saveMarkers(updateMarkers);
     } catch (e) {
+      print("마커 삭제 오류");
       return false;
     }
   }
