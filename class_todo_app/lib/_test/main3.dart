@@ -29,7 +29,7 @@ class _MyAppState extends State<MyApp> {
             children: [
               Text("카운팅 횟수", style: TextStyle(fontSize: 20)),
               Text(
-                "${_numberViewModel.number}",
+                "${_numberViewModel.number.numberCount}",
                 style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
               ),
               Padding(
@@ -55,7 +55,7 @@ class _MyAppState extends State<MyApp> {
                               backgroundColor: Colors.red),
                           onPressed: () {
                             setState(() {
-                              _numberViewModel.decreaseNumber(context);
+                              _numberViewModel.decreaseNumber();
                             });
                           },
                           child: Text(
