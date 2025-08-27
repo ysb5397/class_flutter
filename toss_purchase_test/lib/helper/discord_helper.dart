@@ -19,9 +19,13 @@ class DiscordHelper {
 
   Future<int> sendMessageByWebhook() async {
     final requestBody = {
-      "username": "테스트용",
+      "username": "웹훅 메시지",
       "embeds": [
-        {"title": "엠베드 테스트", "description": "엠베드 설명 테스트", "color": 0xff0000}
+        {
+          "title": "Fake Message",
+          "description": "이런식으로 웹훅으로 장난도 가능합니다",
+          "color": 0xff0000
+        }
       ]
     };
 
