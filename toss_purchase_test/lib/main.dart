@@ -16,7 +16,7 @@ class MainApp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => const MainScreen(),
-        "/purchase": (context) => const TossPurchaseScreen()
+        "/purchase": (context) => TossPurchaseScreen()
       },
     );
   }
