@@ -18,7 +18,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  static const urlIpAddress = "192.0.168.???";
+  static const urlIpAddress = "192.168.0.???";
   static const baseUrl = "http://$urlIpAddress/api/test/gemini";
   final _controller = TextEditingController();
   File? _selectedImage = null;
