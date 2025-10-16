@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/class_airbnb/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/class_airbnb/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/class_airbnb/build" />
+      <excludeFolder url="file://$MODULE_DIR$/class_callback/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/class_callback/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/class_callback/build" />
+      <excludeFolder url="file://$MODULE_DIR$/class_camera/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/class_camera/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/class_camera/build" />
+      <excludeFolder url="file://$MODULE_DIR$/class_camera_v2/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/class_camera_v2/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/class_camera_v2/build" />
+      <excludeFolder url="file://$MODULE_DIR$/class_dart_02/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/class_dart_02/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/class_dart_02/build" />
+      <excludeFolder url="file://$MODULE_DIR$/class_future/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/class_future/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/class_future/build" />
+      <excludeFolder url="file://$MODULE_DIR$/class_google_map_v1/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/class_google_map_v1/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/class_google_map_v1/build" />
+      <excludeFolder url="file://$MODULE_DIR$/class_http/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/class_http/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/class_http/build" />
+      <excludeFolder url="file://$MODULE_DIR$/class_key/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/class_key/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/class_key/build" />
+      <excludeFolder url="file://$MODULE_DIR$/class_login/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/class_login/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/class_login/build" />
+      <excludeFolder url="file://$MODULE_DIR$/class_market/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/class_market/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/class_market/build" />
+      <excludeFolder url="file://$MODULE_DIR$/class_profile/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/class_profile/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/class_profile/build" />
+      <excludeFolder url="file://$MODULE_DIR$/class_recipe/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/class_recipe/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/class_recipe/build" />
+      <excludeFolder url="file://$MODULE_DIR$/class_shopping_cart/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/class_shopping_cart/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/class_shopping_cart/build" />
+      <excludeFolder url="file://$MODULE_DIR$/class_todo_app/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/class_todo_app/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/class_todo_app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/class_websocket_flutter/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/class_websocket_flutter/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/class_websocket_flutter/build" />
+      <excludeFolder url="file://$MODULE_DIR$/cloud_rest/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/cloud_rest/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/cloud_rest/build" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_gesture_key/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_gesture_key/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_gesture_key/build" />
+      <excludeFolder url="file://$MODULE_DIR$/store_app/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/store_app/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/store_app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/test2/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/test2/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/test2/build" />
+      <excludeFolder url="file://$MODULE_DIR$/toss_purchase_test/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/toss_purchase_test/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/toss_purchase_test/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
