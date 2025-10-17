@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_cart_app/models/product.dart';
+import 'package:riverpod_cart_app/providers/cart_provider.dart';
 
-class ProductCard extends StatelessWidget {
+class ProductCard extends ConsumerWidget {
   final Product product;
 
   const ProductCard({super.key, required this.product});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Card(
       elevation: 4,
       clipBehavior: Clip.antiAlias,
@@ -46,7 +48,11 @@ class ProductCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text("${product.price}"),
-                      ElevatedButton(onPressed: () {}, child: Text("추가"))
+                      ElevatedButton(
+                          onPressed: () {
+                            ref.read(cartProvider.notifier).add(product);
+                          },
+                          child: Text("추가"))
                     ],
                   ),
                 ],
